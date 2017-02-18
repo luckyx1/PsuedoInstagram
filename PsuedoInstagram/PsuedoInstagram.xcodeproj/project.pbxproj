@@ -8,10 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		485297C51E568F5300EC1573 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485297C41E568F5300EC1573 /* AppDelegate.swift */; };
-		485297C71E568F5300EC1573 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485297C61E568F5300EC1573 /* ViewController.swift */; };
 		485297CA1E568F5300EC1573 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485297C81E568F5300EC1573 /* Main.storyboard */; };
 		485297CC1E568F5300EC1573 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 485297CB1E568F5300EC1573 /* Assets.xcassets */; };
 		485297CF1E568F5300EC1573 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485297CD1E568F5300EC1573 /* LaunchScreen.storyboard */; };
+		485297D71E56C28400EC1573 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485297D61E56C28400EC1573 /* LoginViewController.swift */; };
+		485297D91E56FFE500EC1573 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485297D81E56FFE500EC1573 /* FeedViewController.swift */; };
+		485297DB1E56FFEF00EC1573 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485297DA1E56FFEF00EC1573 /* ComposeViewController.swift */; };
+		485297DD1E57002C00EC1573 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485297DC1E57002C00EC1573 /* Post.swift */; };
+		48E6255B1E5815290057F5C1 /* InstalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E6255A1E5815290057F5C1 /* InstalCell.swift */; };
 		B1D8C93CBB183BE8BECEAFE3 /* Pods_PsuedoInstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5FF32E9C788A2ABE4F2DC2 /* Pods_PsuedoInstagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,11 +23,15 @@
 		0D5FF32E9C788A2ABE4F2DC2 /* Pods_PsuedoInstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PsuedoInstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		485297C11E568F5300EC1573 /* PsuedoInstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PsuedoInstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		485297C41E568F5300EC1573 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		485297C61E568F5300EC1573 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		485297C91E568F5300EC1573 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		485297CB1E568F5300EC1573 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		485297CE1E568F5300EC1573 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		485297D01E568F5300EC1573 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		485297D61E56C28400EC1573 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = PsuedoInstagram/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
+		485297D81E56FFE500EC1573 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewController.swift; path = PsuedoInstagram/FeedViewController.swift; sourceTree = SOURCE_ROOT; };
+		485297DA1E56FFEF00EC1573 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ComposeViewController.swift; path = PsuedoInstagram/ComposeViewController.swift; sourceTree = SOURCE_ROOT; };
+		485297DC1E57002C00EC1573 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = PsuedoInstagram/Post.swift; sourceTree = SOURCE_ROOT; };
+		48E6255A1E5815290057F5C1 /* InstalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstalCell.swift; sourceTree = "<group>"; };
 		64CB55D4422084C3C7CA97F7 /* Pods-PsuedoInstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PsuedoInstagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PsuedoInstagram/Pods-PsuedoInstagram.debug.xcconfig"; sourceTree = "<group>"; };
 		CA4398726F4409925CDC991E /* Pods-PsuedoInstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PsuedoInstagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-PsuedoInstagram/Pods-PsuedoInstagram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,11 +78,15 @@
 			isa = PBXGroup;
 			children = (
 				485297C41E568F5300EC1573 /* AppDelegate.swift */,
-				485297C61E568F5300EC1573 /* ViewController.swift */,
 				485297C81E568F5300EC1573 /* Main.storyboard */,
 				485297CB1E568F5300EC1573 /* Assets.xcassets */,
 				485297CD1E568F5300EC1573 /* LaunchScreen.storyboard */,
 				485297D01E568F5300EC1573 /* Info.plist */,
+				485297D61E56C28400EC1573 /* LoginViewController.swift */,
+				485297D81E56FFE500EC1573 /* FeedViewController.swift */,
+				485297DA1E56FFEF00EC1573 /* ComposeViewController.swift */,
+				485297DC1E57002C00EC1573 /* Post.swift */,
+				48E6255A1E5815290057F5C1 /* InstalCell.swift */,
 			);
 			path = PsuedoInstagram;
 			sourceTree = "<group>";
@@ -212,8 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				485297C71E568F5300EC1573 /* ViewController.swift in Sources */,
+				485297D71E56C28400EC1573 /* LoginViewController.swift in Sources */,
+				485297D91E56FFE500EC1573 /* FeedViewController.swift in Sources */,
+				48E6255B1E5815290057F5C1 /* InstalCell.swift in Sources */,
 				485297C51E568F5300EC1573 /* AppDelegate.swift in Sources */,
+				485297DB1E56FFEF00EC1573 /* ComposeViewController.swift in Sources */,
+				485297DD1E57002C00EC1573 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +393,7 @@
 				485297D51E568F5300EC1573 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
