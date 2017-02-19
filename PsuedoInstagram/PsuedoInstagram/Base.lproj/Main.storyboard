@@ -209,6 +209,7 @@
                                         <connections>
                                             <action selector="onSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YBB-xq-IfP"/>
                                             <action selector="onSignup:" destination="XGK-qw-Y72" eventType="touchUpInside" id="f8r-ZC-fAa"/>
+                                            <segue destination="RcM-eJ-wZe" kind="presentation" identifier="loginSegue" id="cAR-OC-E4q"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Make an account!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C84-Th-0sU">
@@ -504,4 +505,7 @@
         <image name="not_like" width="50" height="50"/>
         <image name="submit" width="31" height="31"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="cAR-OC-E4q"/>
+    </inferredMetricsTieBreakers>
 </document>
