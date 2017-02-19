@@ -8,21 +8,22 @@
 
 import UIKit
 
-class ComposeViewController: UIViewController {
+class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var caption: UITextView!
-    
+    @IBOutlet weak var selectedImage: UIImageView!
+    let imagePicker = UIImagePickerController()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.selectedImage.isHidden = true
 
         // Do any additional setup after loading the view.
+        imagePicker.delegate = self
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func onImageSubmit(_ sender: Any) {
         //Post.postUserImage(image: <#T##UIImage?#>, withCaption: <#T##String?#>, withCompletion: <#T##PFBooleanResultBlock?##PFBooleanResultBlock?##(Bool, Error?) -> Void#>)
@@ -34,6 +35,44 @@ class ComposeViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
         print("Closing image modal")
     }
+    
+    @IBAction func loadImageButtonTapped(_ sender: UIButton) {
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = .photoLibrary
+        
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [String : Any]) {
+        //let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        //let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
+        
+        // Get the image captured by the UIImagePickerController
+        if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            // Do something with the images (based on your use case)
+            print("found image")
+            selectedImage.contentMode = .scaleAspectFit
+            selectedImage.image = originalImage
+            self.selectedImage.isHidden = false
+        }
+        
+        // Dismiss UIImagePickerController to go back to your original view controller
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
