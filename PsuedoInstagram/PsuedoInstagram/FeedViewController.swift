@@ -50,6 +50,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if let posts = posts{
                 print("yay found data")
                 for post in posts{
+                    print("post is: \(post)")
                     self.posts.append(Post(object: post))
                 }
                 self.tableView.reloadData()

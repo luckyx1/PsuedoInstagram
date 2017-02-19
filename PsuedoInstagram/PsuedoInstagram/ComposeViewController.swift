@@ -26,9 +26,18 @@ class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     
     @IBAction func onImageSubmit(_ sender: Any) {
-        //Post.postUserImage(image: <#T##UIImage?#>, withCaption: <#T##String?#>, withCompletion: <#T##PFBooleanResultBlock?##PFBooleanResultBlock?##(Bool, Error?) -> Void#>)
-        self.dismiss(animated: true, completion: nil)
-        print("Submitting Picture!")
+        print("going to submit")
+        Post.postUserImage(image: self.selectedImage.image, withCaption: self.caption.text) { (success: Bool, error: Error?) in
+            if success{
+                self.dismiss(animated: true, completion: nil)
+                print("Submitting Picture!")
+            }else{
+                print(error?.localizedDescription)
+            }
+        }
+        print("finished submitting!")
+
+        
     }
 
     @IBAction func onCancel(_ sender: Any) {
@@ -62,7 +71,7 @@ class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, 
         dismiss(animated: true, completion: nil)
     }
     
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
     

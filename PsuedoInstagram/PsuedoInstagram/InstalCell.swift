@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import AFNetworking
+import Parse
+import ParseUI
 
 class InstalCell: UITableViewCell {
 
@@ -15,13 +16,19 @@ class InstalCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var likeCounter: UILabel!
-    @IBOutlet weak var instaImage: UIImageView!
+    @IBOutlet weak var instaImage: PFImageView!
     
     var post: Post!{
         didSet{
             userNameLabel.text = post.user?.username
             commentLabel.text = post.caption
             likeCounter.text = "\(post.likeCount)"
+            
+            // Add the image
+            self.instaImage.file = post.image
+            
+            self.instaImage.loadInBackground()
+            
         }
     }
     
