@@ -62,7 +62,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     }
     
-    @IBAction func onSignOut(_ sender: Any) {
+    @IBAction func onSignout(_ sender: Any) {
         PFUser.logOutInBackground { (error: Error?) in
             // PFUser.currentUser() will now be nil
             if let error = error{
@@ -72,17 +72,11 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 print("signed out successfully!")
             }
         }
-
     }
     
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+
+    
+
 
 }
