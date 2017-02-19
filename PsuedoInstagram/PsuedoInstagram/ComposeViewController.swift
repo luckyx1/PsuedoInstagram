@@ -26,8 +26,14 @@ class ComposeViewController: UIViewController {
     
     @IBAction func onImageSubmit(_ sender: Any) {
         //Post.postUserImage(image: <#T##UIImage?#>, withCaption: <#T##String?#>, withCompletion: <#T##PFBooleanResultBlock?##PFBooleanResultBlock?##(Bool, Error?) -> Void#>)
+        self.dismiss(animated: true, completion: nil)
+        print("Submitting Picture!")
     }
 
+    @IBAction func onCancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        print("Closing image modal")
+    }
     /*
     // MARK: - Navigation
 

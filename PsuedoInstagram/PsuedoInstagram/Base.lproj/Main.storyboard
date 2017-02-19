@@ -54,15 +54,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fSp-4J-Q6D"/>
                     <connections>
                         <outlet property="passwordField" destination="w6I-qa-JoD" id="Ave-78-n1d"/>
                         <outlet property="usernameField" destination="JPq-6b-7p3" id="P3Q-fa-XoR"/>
-                        <segue destination="RcM-eJ-wZe" kind="presentation" identifier="loginSegue" id="Uqs-Ca-K1e"/>
+                        <segue destination="RcM-eJ-wZe" kind="presentation" identifier="loginSegue" id="UWi-Qu-BYE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
         </scene>
         <!--Feed View Controller-->
         <scene sceneID="Ztw-NI-Kf1">
@@ -77,7 +78,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="285" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H2n-KO-wJ9">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -140,9 +141,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VjJ-Oc-EDD">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EqO-aH-zYk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="odp-Bj-HoN"/>
+                                </constraints>
                                 <items>
                                     <navigationItem id="XiF-8S-92c">
                                         <barButtonItem key="leftBarButtonItem" image="logout" id="pMK-Hw-Ezv">
@@ -152,7 +156,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="compose" id="W5P-Ce-yFb">
                                             <connections>
-                                                <segue destination="0GO-a9-Zxf" kind="show" id="776-1O-4kM"/>
+                                                <segue destination="0GO-a9-Zxf" kind="show" id="Lrf-qo-XVZ"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -160,6 +164,11 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EqO-aH-zYk" firstAttribute="leading" secondItem="I0J-us-hSV" secondAttribute="leading" id="7nF-hN-Lij"/>
+                            <constraint firstAttribute="trailing" secondItem="EqO-aH-zYk" secondAttribute="trailing" id="BHC-x5-wsh"/>
+                            <constraint firstItem="EqO-aH-zYk" firstAttribute="top" secondItem="I0J-us-hSV" secondAttribute="top" id="e0b-OM-sls"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="H2n-KO-wJ9" id="V3i-SN-cnO"/>
@@ -167,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O1S-Aa-xLD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1265" y="139"/>
+            <point key="canvasLocation" x="2203.5" y="138.5"/>
         </scene>
         <!--Compose View Controller-->
         <scene sceneID="DZ4-9M-U65">
@@ -193,12 +202,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="submit"/>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hRt-MG-Nmd">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZf-J2-spV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="sTq-XE-Mpj"/>
+                                </constraints>
                                 <items>
                                     <navigationItem id="kkC-23-Z9H">
-                                        <barButtonItem key="leftBarButtonItem" title="x" id="2M3-tJ-Pu9"/>
+                                        <barButtonItem key="leftBarButtonItem" title="x" id="2M3-tJ-Pu9">
+                                            <connections>
+                                                <action selector="onCancel:" destination="0GO-a9-Zxf" id="pjc-PV-Yhk"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="submit" id="LDN-vI-VL9">
                                             <connections>
                                                 <action selector="onImageSubmit:" destination="0GO-a9-Zxf" id="W19-01-OYQ"/>
@@ -209,6 +224,11 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WZf-J2-spV" firstAttribute="top" secondItem="H1e-l3-drm" secondAttribute="top" id="3RE-GX-oYW"/>
+                            <constraint firstAttribute="trailing" secondItem="WZf-J2-spV" secondAttribute="trailing" id="fWD-UM-NLj"/>
+                            <constraint firstItem="WZf-J2-spV" firstAttribute="leading" secondItem="H1e-l3-drm" secondAttribute="leading" id="xDC-ff-eZt"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="caption" destination="0E0-77-tx8" id="Ikg-kR-llu"/>
@@ -216,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MgM-dp-eQd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2447" y="139"/>
+            <point key="canvasLocation" x="3386" y="128"/>
         </scene>
     </scenes>
     <resources>

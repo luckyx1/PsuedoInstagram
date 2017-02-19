@@ -67,7 +67,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if let error = error{
                 print(error.localizedDescription)
             }else{
-                self.navigationController?.popViewController(animated: true)
+                self.dismiss(animated: true, completion: nil)
                 print("signed out successfully!")
             }
         }
