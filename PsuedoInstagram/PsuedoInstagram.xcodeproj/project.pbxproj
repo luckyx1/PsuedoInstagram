@@ -15,6 +15,7 @@
 		485297D91E56FFE500EC1573 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485297D81E56FFE500EC1573 /* FeedViewController.swift */; };
 		485297DB1E56FFEF00EC1573 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485297DA1E56FFEF00EC1573 /* ComposeViewController.swift */; };
 		485297DD1E57002C00EC1573 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485297DC1E57002C00EC1573 /* Post.swift */; };
+		48A0FC631E59631A001ADCCC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A0FC621E59631A001ADCCC /* SignUpViewController.swift */; };
 		48E6255B1E5815290057F5C1 /* InstalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E6255A1E5815290057F5C1 /* InstalCell.swift */; };
 		B1D8C93CBB183BE8BECEAFE3 /* Pods_PsuedoInstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5FF32E9C788A2ABE4F2DC2 /* Pods_PsuedoInstagram.framework */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		485297D81E56FFE500EC1573 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewController.swift; path = PsuedoInstagram/FeedViewController.swift; sourceTree = SOURCE_ROOT; };
 		485297DA1E56FFEF00EC1573 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ComposeViewController.swift; path = PsuedoInstagram/ComposeViewController.swift; sourceTree = SOURCE_ROOT; };
 		485297DC1E57002C00EC1573 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = PsuedoInstagram/Post.swift; sourceTree = SOURCE_ROOT; };
+		48A0FC621E59631A001ADCCC /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		48E6255A1E5815290057F5C1 /* InstalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstalCell.swift; sourceTree = "<group>"; };
 		64CB55D4422084C3C7CA97F7 /* Pods-PsuedoInstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PsuedoInstagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PsuedoInstagram/Pods-PsuedoInstagram.debug.xcconfig"; sourceTree = "<group>"; };
 		CA4398726F4409925CDC991E /* Pods-PsuedoInstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PsuedoInstagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-PsuedoInstagram/Pods-PsuedoInstagram.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				485297DA1E56FFEF00EC1573 /* ComposeViewController.swift */,
 				485297DC1E57002C00EC1573 /* Post.swift */,
 				48E6255A1E5815290057F5C1 /* InstalCell.swift */,
+				48A0FC621E59631A001ADCCC /* SignUpViewController.swift */,
 			);
 			path = PsuedoInstagram;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				485297D71E56C28400EC1573 /* LoginViewController.swift in Sources */,
+				48A0FC631E59631A001ADCCC /* SignUpViewController.swift in Sources */,
 				485297D91E56FFE500EC1573 /* FeedViewController.swift in Sources */,
 				48E6255B1E5815290057F5C1 /* InstalCell.swift in Sources */,
 				485297C51E568F5300EC1573 /* AppDelegate.swift in Sources */,
