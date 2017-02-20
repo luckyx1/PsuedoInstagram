@@ -273,7 +273,7 @@
         <!--Feed View Controller-->
         <scene sceneID="Ztw-NI-Kf1">
             <objects>
-                <viewController id="RcM-eJ-wZe" customClass="FeedViewController" customModule="PsuedoInstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="RcM-eJ-wZe" customClass="FeedViewController" customModule="PsuedoInstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Nh-3f-YCV"/>
                         <viewControllerLayoutGuide type="bottom" id="DtT-Qf-YjZ"/>
@@ -290,7 +290,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="389"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uu7-7h-aFm" id="9RU-kw-GGX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="388"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="388.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cae-dC-x2E">
@@ -506,6 +506,6 @@
         <image name="submit" width="31" height="31"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cAR-OC-E4q"/>
+        <segue reference="UWi-Qu-BYE"/>
     </inferredMetricsTieBreakers>
 </document>

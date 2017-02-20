@@ -79,19 +79,43 @@
 		485297C31E568F5300EC1573 /* PsuedoInstagram */ = {
 			isa = PBXGroup;
 			children = (
+				48FC64ED1E5A967800174BEA /* Controller */,
+				48FC64EC1E5A966C00174BEA /* Model */,
+				48FC64EB1E5A966100174BEA /* View */,
 				485297C41E568F5300EC1573 /* AppDelegate.swift */,
 				485297C81E568F5300EC1573 /* Main.storyboard */,
 				485297CB1E568F5300EC1573 /* Assets.xcassets */,
 				485297CD1E568F5300EC1573 /* LaunchScreen.storyboard */,
 				485297D01E568F5300EC1573 /* Info.plist */,
-				485297D61E56C28400EC1573 /* LoginViewController.swift */,
-				485297D81E56FFE500EC1573 /* FeedViewController.swift */,
-				485297DA1E56FFEF00EC1573 /* ComposeViewController.swift */,
-				485297DC1E57002C00EC1573 /* Post.swift */,
-				48E6255A1E5815290057F5C1 /* InstalCell.swift */,
-				48A0FC621E59631A001ADCCC /* SignUpViewController.swift */,
 			);
 			path = PsuedoInstagram;
+			sourceTree = "<group>";
+		};
+		48FC64EB1E5A966100174BEA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				48E6255A1E5815290057F5C1 /* InstalCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		48FC64EC1E5A966C00174BEA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				485297DC1E57002C00EC1573 /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		48FC64ED1E5A967800174BEA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				485297D61E56C28400EC1573 /* LoginViewController.swift */,
+				48A0FC621E59631A001ADCCC /* SignUpViewController.swift */,
+				485297D81E56FFE500EC1573 /* FeedViewController.swift */,
+				485297DA1E56FFEF00EC1573 /* ComposeViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		D847897345558D97528714F0 /* Pods */ = {

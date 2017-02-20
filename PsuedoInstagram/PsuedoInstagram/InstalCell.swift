@@ -23,10 +23,10 @@ class InstalCell: UITableViewCell {
             userNameLabel.text = post.user?.username
             commentLabel.text = post.caption
             likeCounter.text = "\(post.likeCount)"
+            timeLabel.text = post.dateStr
             
             // Add the image
             self.instaImage.file = post.image
-            
             self.instaImage.loadInBackground()
             
         }

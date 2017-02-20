@@ -15,6 +15,10 @@ class Post: NSObject {
     var caption: String?
     var likeCount: Int = 0
     var commentsCount: Int = 0
+    var dateStr: String?
+    
+    static let userDidLogout = NSNotification.Name(rawValue: "UserDidLogout")
+
     
     init(object: PFObject){
         image = object["media"] as? PFFile
@@ -22,6 +26,27 @@ class Post: NSObject {
         caption = object["caption"] as? String
         likeCount = object["likesCount"] as! Int
         commentsCount = object["commentsCount"] as! Int
+        if let postDate = object.createdAt{
+            
+            let calendar = NSCalendar.current
+            let components = calendar.dateComponents([.day,.hour], from: postDate, to: Date())
+            let day = components.day!
+            let hour = components.hour!
+            if day > 0{
+                if day > 1{
+                    dateStr = "\(day) days ago"
+
+                }else{
+                    dateStr = "1 day ago"
+                }
+            }else{
+                dateStr = "\(hour) hr ago"
+            }
+
+        }else{
+            dateStr = "22days ago"
+        }
+        
     }
     
     /**

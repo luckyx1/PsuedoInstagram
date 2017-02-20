@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MBProgressHUD
+
 
 class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -26,16 +28,19 @@ class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     
     @IBAction func onImageSubmit(_ sender: Any) {
-        print("going to submit")
+        print("Going to submit")
+        // Display HUD right before the request is made
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         Post.postUserImage(image: self.selectedImage.image, withCaption: self.caption.text) { (success: Bool, error: Error?) in
             if success{
+                print("Submitted Picture!")
+                MBProgressHUD.hide(for: self.view, animated: true)
                 self.dismiss(animated: true, completion: nil)
-                print("Submitting Picture!")
             }else{
                 print(error?.localizedDescription)
             }
         }
-        print("finished submitting!")
+        print("Backgrounded~")
 
         
     }

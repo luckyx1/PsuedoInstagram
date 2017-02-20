@@ -8,11 +8,14 @@
 
 import UIKit
 import Parse
+import MBProgressHUD
+
 
 class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var posts: [Post] = []
+    let refreshControl = UIRefreshControl()
     
     
     override func viewDidLoad() {
@@ -20,6 +23,11 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+        
+        refreshControl.addTarget(self, action: #selector(refreshControlAction(refreshControl:)), for: UIControlEvents.valueChanged)
+
+        // add refresh control to table view
+        tableView.insertSubview(refreshControl, at: 0)
         
         //Load data
         self.getPosts()
@@ -44,13 +52,13 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         query.order(byDescending: "createdAt")
         query.includeKey("author")
         query.limit = 20
-        
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         // fetch data asynchronously
         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+            MBProgressHUD.hide(for: self.view, animated: true)
             if let posts = posts{
-                print("yay found data")
+                print("Today is \(Date())")
                 for post in posts{
-                    print("post is: \(post)")
                     self.posts.append(Post(object: post))
                 }
                 self.tableView.reloadData()
@@ -68,10 +76,16 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if let error = error{
                 print(error.localizedDescription)
             }else{
-                self.dismiss(animated: true, completion: nil)
+                NotificationCenter.default.post(name: Post.userDidLogout, object: nil)
                 print("signed out successfully!")
             }
         }
+    }
+    
+    func refreshControlAction(refreshControl: UIRefreshControl) {
+        getPosts()
+        // Tell the refreshControl to stop spinning
+        refreshControl.endRefreshing()
     }
     
 
